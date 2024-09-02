@@ -1,1 +1,0 @@
-AgentNPCStore.naturalSpawners.mythicalCreatures.cheip.attack(npc, event);
