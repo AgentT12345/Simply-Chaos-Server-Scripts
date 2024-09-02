@@ -82,9 +82,9 @@ function init(event) {
                 var prefWeight = ratio + neutralWeight;
             }
 
-            const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos];
+            const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos, npc];
 
-            //                  1           2         3         4        5        6       7       8        9        10       11       12        13        14            15(array)
+            //                  1           2         3         4        5        6       7       8        9        10       11       12        13        14          15(array), 16
 
                 return aiVars;
 
@@ -124,6 +124,8 @@ function init(event) {
 
             var plaPos = aiVars[15];
 
+            var npc = aiVars[16];
+
             //retaliation calculations
 
             var choiceValue = (((2 * isClose) / prefWeight) + ((iWeak - tarWeak) + winExch + relMaxHel + relDam) / 4);
@@ -136,15 +138,29 @@ function init(event) {
 
             //tactical variant calculations
 
-
+            var tactVariant = 4;
 
             //tactical radius calculations
 
+            var tactRadius = 5;
+
             //regen calculations
+
+            if (iWeak == true){
+                var regen =  npc.getMaxHealth() / 200;
+                var combatRegen =  npc.getMaxHealth() / 200;
+            }
 
             //speed calculations
 
+            var speed = npc.getSpeed();
+            var flySpeed = npc.getFlySpeed();
+
             //tp calculations
+
+            if (tarDist > 96) {
+                tpPos = plaPos;
+            }
 
             //returned values
 
