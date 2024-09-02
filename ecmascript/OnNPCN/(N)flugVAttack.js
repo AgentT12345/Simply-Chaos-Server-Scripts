@@ -1,0 +1,1 @@
+AgentNPCStore.naturalSpawners.mythicalCreatures.flugVieh.attack(npc, event);

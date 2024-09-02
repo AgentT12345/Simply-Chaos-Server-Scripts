@@ -1,0 +1,1 @@
+AgentNPCStore.naturalSpawners.mythicalCreatures.mikeShepson.attack(npc, event);

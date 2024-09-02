@@ -1,0 +1,1 @@
+AgentNPCStore.naturalSpawners.mythicalCreatures.krystalVieh.attack(npc, event);

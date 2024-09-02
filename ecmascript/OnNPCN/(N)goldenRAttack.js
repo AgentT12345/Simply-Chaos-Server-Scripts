@@ -1,0 +1,1 @@
+AgentNPCStore.naturalSpawners.mythicalCreatures.goldenRam.attack(npc, event);
