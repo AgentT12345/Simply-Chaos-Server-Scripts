@@ -82,15 +82,15 @@ function init(event) {
                 var prefWeight = ratio + neutralWeight;
             }
 
-            const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos, npc];
+            const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos];
 
-            //                  0          1       2          3         4       5       6        7       8        9        10       11       12            13          14(array) 15
+            //                  0          1       2          3         4       5       6        7       8        9        10       11       12            13          14(array) 
 
                 return aiVars;
 
         },
         
-        behaviorCalculator: function (aiVars, tpLogic, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight){
+        behaviorCalculator: function (npc, aiVars, tpLogic, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight){
 
             //ai vars
 
@@ -123,8 +123,6 @@ function init(event) {
             var combatStyleSwitch = aiVars[13];
 
             var plaPos = aiVars[14];
-
-            var npc = aiVars[15];
 
             //retaliation calculations
 
@@ -246,9 +244,9 @@ function init(event) {
 
         aiTimer: function (ID, npc, tpLogic, aiProps){
 
-            const aiVars = this.varCapture(npc, aiProps[0], aiProps[1], aiProps[2], aiProps[3], aiProps[4], aiProps[5], aiProps[6], aiProps[7]);
+            const aiVars = AgentAiCore.varCapture(npc, aiProps[0], aiProps[1], aiProps[2], aiProps[3], aiProps[4], aiProps[5], aiProps[6], aiProps[7]);
 
-            const aiCalcs = this.behaviorCalculator(aiVars, tpLogic, aiProps[8], aiProps[9], aiProps[10], aiProps[11], aiProps[12], aiProps[13], aiProps[14], aiProps[15], aiProps[16]);
+            const aiCalcs = AgentAiCore.behaviorCalculator(npc, aiVars, tpLogic, aiProps[8], aiProps[9], aiProps[10], aiProps[11], aiProps[12], aiProps[13], aiProps[14], aiProps[15], aiProps[16]);
 
         },
 
