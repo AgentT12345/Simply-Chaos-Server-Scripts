@@ -2,12 +2,6 @@ function init(event) {
     
 	var AgentAiCore = {
 
-        attackEvent: function (npc, event) {
-
-            npc.setTempData("damDelt" , event.getDamage);
-
-        },
-
         varCapture: function (npc, howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight) {
 
             //This section captures AI Variables
@@ -16,13 +10,7 @@ function init(event) {
 
             var target = npc.getAttackTarget();
 
-            if (npc.getTempData("damDelt") > 0){
-
-                var DamDelt = npc.getTempData("damDelt");
-
-            }else {
-                var DamDelt = 1;
-            }
+            var DamDelt = (npc.getMeleeStrength() + npc.getRangedStrength()) / 2;
 
             if (target.getType() == 1){
 
