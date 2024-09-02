@@ -1,1 +1,0 @@
-AgentNPCStore.naturalSpawners.evolvedMobs.zomBuff.attack(npc, event);
