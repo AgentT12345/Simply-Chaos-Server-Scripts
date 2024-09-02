@@ -10,7 +10,7 @@ function init(event) {
 
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 10, 1, 10, 4, 1, 1, 19200, 2, 0, 2, 0, 0.7, 0, 0.7, 0, 1, 10);
+						AgentFunc.natSpawnInit(npc, 10, 1, 10, 4, 1, 1, 19200, 1, 10);
 
 					},
 
@@ -102,7 +102,7 @@ function init(event) {
 			flugVieh: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 35, 10, 10, 4, 1, 1, 19200, 1.2, 1.1, 1.1, 1.1, 0.7, 1.1, 0.7, 1, 1, 10);
+						AgentFunc.natSpawnInit(npc, 35, 10, 10, 4, 1, 1, 19200, 1, 10);
 
 					},
 
@@ -185,7 +185,7 @@ function init(event) {
 			goldenRam: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 10, 3, 10, 4, 1, 1, 6400, 1.2, 0.8, 0.8, 0.8, 0.6, 0.8, 0.6, 1, 0, 1);
+						AgentFunc.natSpawnInit(npc, 10, 3, 10, 4, 1, 1, 6400, 0, 1);
 
 					},
 
@@ -278,7 +278,7 @@ function init(event) {
 			hamlin: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 25, 5, 10, 4, 1, 1, 19200, 1.2, 0, 0, 0, 0, 0, 0, 0, 1, 10);
+						AgentFunc.natSpawnInit(npc, 25, 5, 10, 4, 1, 1, 19200, 1, 10);
 
 					},
 
@@ -362,7 +362,7 @@ function init(event) {
 			krystalVieh: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 25, 4, 10, 4, 1, 1, 19200, 1.3, 1.2, 1.2, 1.2, 0.8, 1.2, 0.8, 1, 0, 1);
+						AgentFunc.natSpawnInit(npc, 25, 4, 10, 4, 1, 1, 19200, 0, 1);
 
 					},
 
@@ -446,7 +446,7 @@ function init(event) {
 			mikeShepson: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 30, 5, 10, 4, 1, 1, 19200, 2, 2, 1.1, 0, 0.7, 1.1, 0, 0, 1, 10);
+						AgentFunc.natSpawnInit(npc, 30, 5, 10, 4, 1, 1, 19200, 1, 10);
 
 					},
 
@@ -539,7 +539,7 @@ function init(event) {
 			mythicalCreatureBase: {
 					init: function (npc, event) {
 						
-						AgentFunc.natSpawnInit(npc, 10, 3, 10, 4, 1, 1, 19200, 1.2, 0.8, 0.8, 0.8, 0.6, 0.8, 0.6, 1, 0, 1);
+						AgentFunc.natSpawnInit(npc, 10, 3, 10, 4, 1, 1, 19200, 0, 1);
 
 					},
 
@@ -636,7 +636,7 @@ function init(event) {
 					enderMarcher: {
 						init: function (npc, event) {
 							
-							AgentFunc.natSpawnInit(npc, 100, 25, 10, 4, 1, 1, 19200, 1.2, 1.1, 1.1, 1.1, 0.7, 1.1, 0.7, 1, 0, 1);
+							AgentFunc.natSpawnInit(npc, 100, 25, 10, 4, 1, 1, 19200, 0, 1);
 
 						},
 
@@ -734,7 +734,7 @@ function init(event) {
 					zomBuff: {
 						init: function (npc, event) {
 							
-							AgentFunc.natSpawnInit(npc, 10, 2, 10, 4, 1, 1, 19200, 1.2, 1.1, 1.1, 1.1, 0.7, 1.1, 0.7, 1, 0, 1);
+							AgentFunc.natSpawnInit(npc, 10, 2, 10, 4, 1, 1, 19200, 0, 1);
 
 						},
 
@@ -827,7 +827,7 @@ function init(event) {
 					evolvedMobBase: {
 						init: function (npc, event) {
 							
-							AgentFunc.natSpawnInit(npc, 10, 2, 10, 4, 1, 1, 19200, 1.2, 1.1, 1.1, 1.1, 0.7, 1.1, 0.7, 1, 0, 1);
+							AgentFunc.natSpawnInit(npc, 10, 2, 10, 4, 1, 1, 19200, 0, 1);
 
 						},
 
