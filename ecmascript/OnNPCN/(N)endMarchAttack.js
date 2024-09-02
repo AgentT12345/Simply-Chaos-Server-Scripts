@@ -1,1 +1,0 @@
-AgentNPCStore.naturalSpawners.evolvedMobs.enderMarcher.attack(npc, event);
