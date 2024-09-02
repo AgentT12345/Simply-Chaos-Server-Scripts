@@ -1,1 +1,0 @@
-AgentNPCStore.naturalSpawners.mythicalCreatures.hamlin.attack(npc, event);
