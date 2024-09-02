@@ -152,11 +152,13 @@ function init(event) {
             //speed calculations
 
             var speed = npc.getSpeed();
-            var flySpeed = npc.getFlySpeed();
+            var flySpeed = npc.getFlySpeed(1);
 
             //tp calculations
 
             if (tarDist > npc.getAggroRange() + 10) {
+
+                var willTp = 1;
 
                 var x = plaPos[0];
                 var y = plaPos[1];
@@ -205,6 +207,8 @@ function init(event) {
                 const finalPos = [newX, newY, newZ];
 
                 tpPos = finalPos;
+            } else {
+                var willTp = 0;
             }
 
             //returned values
