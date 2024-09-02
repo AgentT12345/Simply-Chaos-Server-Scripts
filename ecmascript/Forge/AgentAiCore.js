@@ -209,6 +209,7 @@ function init(event) {
                 tpPos = finalPos;
             } else {
                 var willTp = 0;
+                var tpPos = plaPos;
             }
 
             //returned values
