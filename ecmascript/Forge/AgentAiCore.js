@@ -84,7 +84,7 @@ function init(event) {
 
             const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos, npc];
 
-            //                  1           2         3         4        5        6       7       8        9        10       11       12        13        14          15(array), 16
+            //                  0          1       2          3         4       5       6        7       8        9        10       11       12            13            14(array) 15
 
                 return aiVars;
 
@@ -94,37 +94,37 @@ function init(event) {
 
             //ai vars
 
-            var prefWeight = aiVars[1];
+            var prefWeight = aiVars[0];
 
-            var tarHel = aiVars[2];
+            var tarHel = aiVars[1];
 
-            var tarMaxHel = aiVars[3];
+            var tarMaxHel = aiVars[2];
 
-            var relMaxHel = aiVars[4];
+            var relMaxHel = aiVars[3];
 
-            var relHel = aiVars[5];
+            var relHel = aiVars[4];
 
-            var damTak = aiVars[6];
+            var damTak = aiVars[5];
 
-            var damDelt = aiVars[7];
+            var damDelt = aiVars[6];
 
-            var relDam = aiVars[8];
+            var relDam = aiVars[7];
 
-            var winExch = aiVars[9];
+            var winExch = aiVars[8];
 
-            var tarDist = aiVars[10];
+            var tarDist = aiVars[9];
             
-            var isClose = aiVars[11];
+            var isClose = aiVars[10];
 
-            var iWeak = aiVars[12];
+            var iWeak = aiVars[11];
 
-            var tarWeak = aiVars[13];
+            var tarWeak = aiVars[12];
 
-            var combatStyleSwitch = aiVars[14];
+            var combatStyleSwitch = aiVars[13];
 
-            var plaPos = aiVars[15];
+            var plaPos = aiVars[14];
 
-            var npc = aiVars[16];
+            var npc = aiVars[15];
 
             //retaliation calculations
 
@@ -158,13 +158,60 @@ function init(event) {
 
             //tp calculations
 
-            if (tarDist > 96) {
-                tpPos = plaPos;
+            if (tarDist > npc.getAggroRange() + 10) {
+
+                var x = plaPos[0];
+                var y = plaPos[1];
+                var z = plaPos[2];
+
+                var randX = Math.round(Math.random());
+                var randZ = Math.round(Math.random());
+
+                switch (randX) {
+
+                    case 0:
+                        var negateX = -1;
+                        break;
+                    
+                    case 1:
+                        var negateX = 1;
+                        break;
+                }
+                switch (randZ) {
+
+                    case 0:
+                        var negateZ = -1;
+                        break;
+                    
+                    case 1:
+                        var negateZ = 1;
+                        break;
+                }
+
+                var newX = x + 10 + (Math.random() * 5 * negateX);
+                var newZ = z + 10 + (Math.random() * 5 * negateZ);
+
+                var tempY = y;
+                var world = npc.getWorld();
+
+                switch (world.getBlock(newX, tempY, newZ)){
+                    case 0:
+                        var newY = tempY;
+                        return;
+                    default:
+                        var newY = tempY + 10;
+                        break;
+
+                }
+
+                const finalPos = [newX, newY, newZ];
+
+                tpPos = finalPos;
             }
 
             //returned values
 
-            const aiCalcs = [retaliationType, tactVariant, tactRadius, regen, combatRegen, speed, flySpeed, tpPos]
+            const aiCalcs = [retaliationType, tactVariant, tactRadius, regen, combatRegen, speed, flySpeed, willTp, tpPos]
 
             return aiCalcs;
 
@@ -172,13 +219,20 @@ function init(event) {
 
         aiBehaviorsSet: function (aiCalcs) {
 
-            npc.setRetaliateType(aiCalcs[1]);
-            npc.setTacticalVariant(aiCalcs[2]);
-            npc.setTacticalRadius(aiCalcs[3]);
-            npc.setCombatRegen(aiCalcsp[4]);
-            npc.setRegen(aiCalcs[5]);
-            npc.setSpeed(aiCalcs[6]);
-            npc.setFlySpeed(aiCalcs[7]);
+            npc.setRetaliateType(aiCalcs[0]);
+            npc.setTacticalVariant(aiCalcs[1]);
+            npc.setTacticalRadius(aiCalcs[2]);
+            npc.setCombatRegen(aiCalcsp[3]);
+            npc.setRegen(aiCalcs[4]);
+            npc.setSpeed(aiCalcs[5]);
+            npc.setFlySpeed(aiCalcs[6]);
+            switch (aiCalcs[7]){
+                case 1:
+                    npc.setPosition(aiCalcs[8]);
+                    break;
+                default:
+                    break;
+            }
 
         },
 
