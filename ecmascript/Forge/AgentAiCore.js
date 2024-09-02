@@ -84,7 +84,7 @@ function init(event) {
 
             const aiVars = [prefWeight, TarHel, TarMaxHel, RelMaxHel, RelHel, DamTak, DamDelt, RelDam, WinExch, TarDist, IsClose, IsIWeak, IsTarWeak, combaStyleSwitch, PlaPos, npc];
 
-            //                  0          1       2          3         4       5       6        7       8        9        10       11       12            13            14(array) 15
+            //                  0          1       2          3         4       5       6        7       8        9        10       11       12            13          14(array) 15
 
                 return aiVars;
 
@@ -243,6 +243,22 @@ function init(event) {
         kiAttack: function (npc, event, aiVars, funcOn ){
 
         },
+
+        aiTimer: function (ID, npc, tpLogic, aiProps){
+
+            const aiVars = this.varCapture(npc, aiProps[0], aiProps[1], aiProps[2], aiProps[3], aiProps[4], aiProps[5], aiProps[6], aiProps[7]);
+
+            const aiCalcs = this.behaviorCalculator(aiVars, tpLogic, aiProps[8], aiProps[9], aiProps[10], aiProps[11], aiProps[12], aiProps[13], aiProps[14], aiProps[15], aiProps[16]);
+
+        },
+
+        aiStart: function (npc, ticks) {
+            npc.timers.forceStart(128, ticks, 1);
+        },
+
+        aiStop: function (npc) {
+            npc.timers.forceStop(128);
+        }
 
     }
 

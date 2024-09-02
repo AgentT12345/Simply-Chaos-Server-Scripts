@@ -14,12 +14,6 @@ function init(event) {
 
 					},
 
-					attack: function (npc, event) {
-
-						AgentAiCore.attackEvent(npc, event);
-
-					},
-
 					damaged: function (npc, event) {
 
 						//This section allows a boss to spawn 1/10000 times on hit, or regens 10 HP.
@@ -60,20 +54,26 @@ function init(event) {
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.cheip(npc, ID, 20);
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
 
 
 					},
 
 					target: function (npc, event) {
 
-						AgentAiCore.aiStart(20);
+						AgentAiCore.aiStart(npc, 20);
 
 					},
 
 					targetLost: function (npc, event) {
 
-						AgentAiCore.aiStop;
+						AgentAiCore.aiStop(npc);
 						
 					},
 
