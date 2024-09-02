@@ -66,7 +66,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -150,7 +150,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -242,7 +242,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -326,7 +326,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -410,7 +410,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -503,7 +503,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -596,7 +596,7 @@ function init(event) {
 						const retWeight = 1;
 						const tactVWeight = 1;
 						const tactRWeight = 1;
-						const combatRegen = 1;
+						const regWeight = 1;
 						const combatRegWeight = 1;
 						const speedWeight = 1;
 						const flySpeedWeight = 1;
@@ -698,7 +698,7 @@ function init(event) {
 							const retWeight = 1;
 							const tactVWeight = 1;
 							const tactRWeight = 1;
-							const combatRegen = 1;
+							const regWeight = 1;
 							const combatRegWeight = 1;
 							const speedWeight = 1;
 							const flySpeedWeight = 1;
@@ -790,7 +790,7 @@ function init(event) {
 							const retWeight = 1;
 							const tactVWeight = 1;
 							const tactRWeight = 1;
-							const combatRegen = 1;
+							const regWeight = 1;
 							const combatRegWeight = 1;
 							const speedWeight = 1;
 							const flySpeedWeight = 1;
@@ -882,7 +882,7 @@ function init(event) {
 							const retWeight = 1;
 							const tactVWeight = 1;
 							const tactRWeight = 1;
-							const combatRegen = 1;
+							const regWeight = 1;
 							const combatRegWeight = 1;
 							const speedWeight = 1;
 							const flySpeedWeight = 1;
