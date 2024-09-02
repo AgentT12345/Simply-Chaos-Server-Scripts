@@ -54,6 +54,24 @@ function init(event) {
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
 
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 3;
+						const meleeWeight = 10;
+						const ranWeight = 0;
+						const neutralWeight = 0;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
 						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
 
 						function tpLogic () {
@@ -119,13 +137,49 @@ function init(event) {
 						var ID = event.getId();
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
+
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 2;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
+
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.flugVieh(npc, event);
-					
-					}
+						AgentAiCore.aiStart(npc, 20);
+
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
+					},
+
+					properties: []
 			},
 
 			goldenRam: {
@@ -172,16 +226,49 @@ function init(event) {
 
 					timer: function (npc, event) {
 						
-					var ID = event.getId();
+						var ID = event.getId();
 
-					AgentFunc.natSpawnTimers(npc, ID, 6400);
+						AgentFunc.natSpawnTimers(npc, ID, 6400);
+
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 2;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
 
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.goldenRam(npc, event);
+						AgentAiCore.aiStart(npc, 20);
 
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
 					},
 
 					properties: []
@@ -227,12 +314,45 @@ function init(event) {
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
 
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 2;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
+
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.hamlin(npc, event);
+						AgentAiCore.aiStart(npc, 20);
 
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
 					},
 
 					properties: []
@@ -278,12 +398,45 @@ function init(event) {
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
 
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 2;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
+
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.krystalVieh(npc, event);
+						AgentAiCore.aiStart(npc, 20);
 
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
 					},
 
 					properties: []
@@ -337,12 +490,46 @@ function init(event) {
 						var ID = event.getId();
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
+
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 1;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
+
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-						AgentAiStore.naturalSpawner.mythicalCreatures.mikeShepson(npc, event);
+						AgentAiCore.aiStart(npc, 20);
 
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
 					},
 
 					properties: []
@@ -396,12 +583,46 @@ function init(event) {
 						var ID = event.getId();
 
 						AgentFunc.natSpawnTimers(npc, ID, 19200);
+
+						const howFar = 5;
+						const howMeweak = 10;
+						const howTarWeak = 10;
+						const combaStyleSwitch = 2;
+						const meleeWeight = 1;
+						const ranWeight = 1;
+						const neutralWeight = 0.1;
+						const passiveWeight = 1;
+						const chargeRatio = 1;
+						const retWeight = 1;
+						const tactVWeight = 1;
+						const tactRWeight = 1;
+						const combatRegen = 1;
+						const combatRegWeight = 1;
+						const speedWeight = 1;
+						const flySpeedWeight = 1;
+						const tpPosWeight = 1;
+
+						const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+
+						function tpLogic () {
+
+						}
+
+						AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+
+
 					},
 
-					update: function (npc, event) {
+					target: function (npc, event) {
 
-					AgentAiStore.naturalSpawner.mythicalCreatures.goldenRam(npc, event);
+						AgentAiCore.aiStart(npc, 20);
 
+					},
+
+					targetLost: function (npc, event) {
+
+						AgentAiCore.aiStop(npc);
+						
 					},
 
 					properties: []
@@ -460,19 +681,52 @@ function init(event) {
 						},
 
 						timer: function (npc, event) {
-							
+						
 							var ID = event.getId();
-
+	
 							AgentFunc.natSpawnTimers(npc, ID, 19200);
-
+	
+							const howFar = 5;
+							const howMeweak = 10;
+							const howTarWeak = 10;
+							const combaStyleSwitch = 2;
+							const meleeWeight = 1;
+							const ranWeight = 1;
+							const neutralWeight = 0.1;
+							const passiveWeight = 1;
+							const chargeRatio = 1;
+							const retWeight = 1;
+							const tactVWeight = 1;
+							const tactRWeight = 1;
+							const combatRegen = 1;
+							const combatRegWeight = 1;
+							const speedWeight = 1;
+							const flySpeedWeight = 1;
+							const tpPosWeight = 1;
+	
+							const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+	
+							function tpLogic () {
+	
+							}
+	
+							AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+	
+	
 						},
-
-						update: function (npc, event) {
-
-							AgentAiStore.naturalSpawner.evolvedMobs.enderMarcher(npc, event);
-
+	
+						target: function (npc, event) {
+	
+							AgentAiCore.aiStart(npc, 20);
+	
 						},
-
+	
+						targetLost: function (npc, event) {
+	
+							AgentAiCore.aiStop(npc);
+							
+						},
+	
 						properties: []
 						
 					},
@@ -519,19 +773,52 @@ function init(event) {
 						},
 
 						timer: function (npc, event) {
-							
+						
 							var ID = event.getId();
-
+	
 							AgentFunc.natSpawnTimers(npc, ID, 19200);
-
+	
+							const howFar = 5;
+							const howMeweak = 10;
+							const howTarWeak = 10;
+							const combaStyleSwitch = 2;
+							const meleeWeight = 1;
+							const ranWeight = 1;
+							const neutralWeight = 0.1;
+							const passiveWeight = 1;
+							const chargeRatio = 1;
+							const retWeight = 1;
+							const tactVWeight = 1;
+							const tactRWeight = 1;
+							const combatRegen = 1;
+							const combatRegWeight = 1;
+							const speedWeight = 1;
+							const flySpeedWeight = 1;
+							const tpPosWeight = 1;
+	
+							const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+	
+							function tpLogic () {
+	
+							}
+	
+							AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+	
+	
 						},
-
-						update: function (npc, event) {
-
-							AgentAiStore.naturalSpawner.evolvedMobs.zomBuff(npc, event);
-
+	
+						target: function (npc, event) {
+	
+							AgentAiCore.aiStart(npc, 20);
+	
 						},
-
+	
+						targetLost: function (npc, event) {
+	
+							AgentAiCore.aiStop(npc);
+							
+						},
+	
 						properties: []
 						
 
@@ -578,19 +865,52 @@ function init(event) {
 						},
 
 						timer: function (npc, event) {
-							
+						
 							var ID = event.getId();
-
+	
 							AgentFunc.natSpawnTimers(npc, ID, 19200);
-
+	
+							const howFar = 5;
+							const howMeweak = 10;
+							const howTarWeak = 10;
+							const combaStyleSwitch = 2;
+							const meleeWeight = 1;
+							const ranWeight = 1;
+							const neutralWeight = 0.1;
+							const passiveWeight = 1;
+							const chargeRatio = 1;
+							const retWeight = 1;
+							const tactVWeight = 1;
+							const tactRWeight = 1;
+							const combatRegen = 1;
+							const combatRegWeight = 1;
+							const speedWeight = 1;
+							const flySpeedWeight = 1;
+							const tpPosWeight = 1;
+	
+							const aiProps = [howFar, howMeweak, howTarWeak, combaStyleSwitch, meleeWeight, ranWeight, neutralWeight, passiveWeight, chargeRatio, retWeight, tactVWeight, tactRWeight, regWeight, combatRegWeight, speedWeight, flySpeedWeight, tpPosWeight];
+	
+							function tpLogic () {
+	
+							}
+	
+							AgentAiCore.aiTimer(ID, npc, tpLogic, aiProps);
+	
+	
 						},
-
-						update: function (npc, event) {
-
-							AgentAiStore.naturalSpawner.evolvedMobs.zomBuff(npc, event);
-
+	
+						target: function (npc, event) {
+	
+							AgentAiCore.aiStart(npc, 20);
+	
 						},
-
+	
+						targetLost: function (npc, event) {
+	
+							AgentAiCore.aiStop(npc);
+							
+						},
+	
 						properties: []
 						
 					}
