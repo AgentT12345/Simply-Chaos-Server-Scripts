@@ -274,7 +274,7 @@ function init(event) {
         },
 
         aiStop: function (npc) {
-            npc.timers.forceStop(128);
+            npc.timers.stop(128);
         }
 
     }
