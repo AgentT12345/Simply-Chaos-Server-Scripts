@@ -64,7 +64,7 @@ function init(event) {
 
             var RelHel = npc.getHealth / TarHel;
 
-            var IsClose = Boolean(TarDist > howFarFinal);
+            var IsClose = Boolean(TarDist < howFarFinal);
 
             var WinExch = Boolean((npc.getHealth / DamTak) > (TarHel / DamDelt));
 
