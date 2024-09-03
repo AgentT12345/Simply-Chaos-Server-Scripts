@@ -8,7 +8,7 @@ function init(event) {
 
             var powTypRatio = npc.getStoredData("PowerTypRatio");
 
-            var target = npc.getAttackTarget();
+            var target = npc.getTempData("target");
 
             var DamDelt = (npc.getMeleeStrength() + npc.getRangedStrength()) / 2;
 
@@ -225,7 +225,7 @@ function init(event) {
             npc.setRetaliateType(aiCalcs[0]);
             npc.setTacticalVariant(aiCalcs[1]);
             npc.setTacticalRadius(aiCalcs[2]);
-            npc.setCombatRegen(aiCalcsp[3]);
+            npc.setCombatRegen(aiCalcs[3]);
             npc.setRegen(aiCalcs[4]);
             npc.setSpeed(aiCalcs[5]);
             npc.setFlySpeed(aiCalcs[6]);
@@ -270,6 +270,9 @@ function init(event) {
         },
 
         aiStart: function (npc, ticks) {
+
+            npc.setTempData("target", npc.getAttackTarget());
+
             npc.timers.forceStart(128, ticks, 1);
         },
 
