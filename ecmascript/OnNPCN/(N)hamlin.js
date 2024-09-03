@@ -32,3 +32,17 @@ function timer(event) {
     
     AgentNPCStore.naturalSpawners.mythicalCreatures.hamlin.timer(npc, event);
 }
+
+function target(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.hamlin.target(npc, event);
+}
+
+function targetLost(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.hamlin.targetLost(npc, event);
+}

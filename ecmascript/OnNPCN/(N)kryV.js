@@ -32,3 +32,17 @@ function timer(event) {
     
     AgentNPCStore.naturalSpawners.mythicalCreatures.krystalVieh.timer(npc, event);
 }
+
+function target(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.krystalVieh.target(npc, event);
+}
+
+function targetLost(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.krystalVieh.targetLost(npc, event);
+}

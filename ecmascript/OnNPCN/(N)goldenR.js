@@ -32,3 +32,17 @@ function timer(event) {
     
     AgentNPCStore.naturalSpawners.mythicalCreatures.goldenRam.timer(npc, event);
 }
+
+function target(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.goldenRam.target(npc, event);
+}
+
+function targetLost(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.goldenRam.targetLost(npc, event);
+}

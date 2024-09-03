@@ -32,3 +32,17 @@ function timer(event) {
     
     AgentNPCStore.naturalSpawners.mythicalCreatures.cheip.timer(npc, event);
 }
+
+function target(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.cheip.target(npc, event);
+}
+
+function targetLost(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.cheip.targetLost(npc, event);
+}

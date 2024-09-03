@@ -32,3 +32,17 @@ function timer(event) {
     
     AgentNPCStore.naturalSpawners.mythicalCreatures.flugVieh.timer(npc, event);
 }
+
+function target(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.flugVieh.target(npc, event);
+}
+
+function targetLost(event) {
+
+    var npc = event.getNpc();
+
+    AgentNPCStore.naturalSpawners.mythicalCreatures.flugVieh.targetLost(npc, event);
+}
