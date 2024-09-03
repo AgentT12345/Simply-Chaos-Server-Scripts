@@ -220,7 +220,7 @@ function init(event) {
 
         },
 
-        aiBehaviorsSet: function (aiCalcs) {
+        aiBehaviorsSet: function (npc, aiCalcs) {
 
             npc.setRetaliateType(aiCalcs[0]);
             npc.setTacticalVariant(aiCalcs[1]);
@@ -249,9 +249,23 @@ function init(event) {
 
         aiTimer: function (ID, npc, tpLogic, aiProps){
 
-            const aiVars = AgentAiCore.varCapture(npc, aiProps[0], aiProps[1], aiProps[2], aiProps[3], aiProps[4], aiProps[5], aiProps[6], aiProps[7]);
+            switch (ID){
 
-            const aiCalcs = AgentAiCore.behaviorCalculator(npc, aiVars, tpLogic, aiProps[8], aiProps[9], aiProps[10], aiProps[11], aiProps[12], aiProps[13], aiProps[14], aiProps[15], aiProps[16]);
+                case 128: 
+
+                const aiVars = AgentAiCore.varCapture(npc, aiProps[0], aiProps[1], aiProps[2], aiProps[3], aiProps[4], aiProps[5], aiProps[6], aiProps[7]);
+
+                const aiCalcs = AgentAiCore.behaviorCalculator(npc, aiVars, tpLogic, aiProps[8], aiProps[9], aiProps[10], aiProps[11], aiProps[12], aiProps[13], aiProps[14], aiProps[15], aiProps[16]);
+
+                AgentAiCore.aiBehaviorsSet(npc, aiCalcs);
+
+                break;
+
+                default: 
+
+                break;
+
+            }
 
         },
 
