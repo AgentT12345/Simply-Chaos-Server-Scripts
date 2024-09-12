@@ -271,9 +271,7 @@ function init(event) {
 
         aiStart: function (npc, ticks) {
 
-            npc.setTempData("target", npc.getAttackTarget());
-
-            npc.timers.forceStart(128, ticks, 1);
+            
         },
 
         aiStop: function (npc) {
