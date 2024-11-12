@@ -8,7 +8,7 @@ function init(event) {
 
             var powTypRatio = npc.getStoredData("PowerTypRatio");
 
-            var target = npc.getTempData("target");
+            var target = npc.getAttackTarget();
 
             var DamDelt = (npc.getMeleeStrength() + npc.getRangedStrength()) / 2;
 
