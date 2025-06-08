@@ -4,11 +4,6 @@ function init(event) {
 
         natSpawnInit: function (npc, MaxLevel, MinLevel, MaxPowerBoost, MinPowerBoost, MelStrRan, RanStrRan, despawntime, DividedLevel, LevelDivider ) {
 
-            var npcIdentify = String(npc.getMCEntity());
-            var uuid = npcIdentify.slice(6, -45);
-
-            if (npc.getStoredData("canInit") != uuid) {
-
             var TitleClass = Math.round(Math.random() * (MaxLevel - MinLevel + 1) + MinLevel);
 
             switch (DividedLevel) {
@@ -63,7 +58,7 @@ function init(event) {
 
             npc.setStoredData("canInit", uuid);
     
-            }
+            
         },
 
         bossChance: function (npc, Boss, BossCap, BossLimit, OnFail) {
