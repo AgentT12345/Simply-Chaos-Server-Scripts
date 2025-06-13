@@ -271,11 +271,7 @@ function init(event) {
 
         aiStart: function (npc, ticks) {
 
-            if(npc.timers.has(128) = false){
-
             npc.timers.start(128, ticks, 1);
-
-            }
             
         },
 
