@@ -227,7 +227,7 @@ function init(event) {
                     } else if (PlayerPower > PowerLevel * 1.4) {
                     reward = reward * 0.65;
                     }
-                    if (PlayerPower < PowerLevel * 0.75){
+                    if (PlayerPower < PowerLevel * 1.2){
                         var x = (PowerLevel * 0.9) / PlayerPower;
                         var peak = 3;
                         slope = 4;
