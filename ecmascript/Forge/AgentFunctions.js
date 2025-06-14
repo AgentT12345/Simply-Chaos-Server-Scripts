@@ -55,8 +55,6 @@ function init(event) {
             npc.timers.forceStart(127, despawntime, 1);
     
             npc.setTitle("LV " + TitleClass + " " + npc.getFaction().getName());
-
-            npc.setStoredData("canInit", uuid);
     
             
         },
